@@ -1,0 +1,27 @@
+Ch1_MachineLearning to DeepLearning
+
+- SoftMax
+* S(Y) = exp(y_i) / sum(exp(y_i))
+
+- One hot Encodeing
+* sparse matrix
+
+- Cross Entropy
+* D(S,L) = - sum(L_i * log(S_i))
+* S - distribution; L - one hot encoding
+* Non-symmetric
+
+- Multinomial Logistic Classification:
+Input(X) -> Logit(y) -> SoftMax( S(y)) -> OneHotLabel (L)
+1) Linear Model  WX+b
+2) SoftMax()
+3) Cross Entropy D(S,L)
+
+- Minimize D( S(WX+b), L)
+* Loss function 
+	L = average (D(S(WX_i+b)),L_i)
+* Optimizaion (Gradient Descent)
+	calcualte derivative and climb the hill
+	step \alpha\Delta L(w1,w2)
+	|W - \alpha \delta L => new W
+	|b - \alpha \delta L => new b
