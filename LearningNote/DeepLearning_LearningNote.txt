@@ -25,3 +25,29 @@ Input(X) -> Logit(y) -> SoftMax( S(y)) -> OneHotLabel (L)
 	step \alpha\Delta L(w1,w2)
 	|W - \alpha \delta L => new W
 	|b - \alpha \delta L => new b
+	
+- Regularization
+* L2 Regularization L' = L + beta * 0.5 * sum(w_i^2)
+* Dropout:
+	Randomly drop activations (between layers), re-weighted the rest
+	Redundant representations
+	Dropout during training (randomly), no dropout in Evaluation
+
+====Convolutional Neural Network====
+- Weight sharing (statistical invariants)
+- Convolutoin
+* "patch"(kernel) from big shallow to narrow deep
+	256*256*3 -> 16*16*768
+* Stride - movement each step
+	Valid Padding - require full square
+	Same Padding - half sqaure at edge.
+	
+- Advanced covent-ology
+* Max Pooling - expensive to compute
+	Lenet-5 1998
+	Alexnet 2012
+* Average pooling 
+* 1x1 convolutions - mini deep network over the patch
+* Inception Module - mixed and concat
+
+
